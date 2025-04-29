@@ -2,10 +2,6 @@ import torch
 import torch.nn.functional as F
 import json
 
-import torch
-import torch.nn.functional as F
-import json
-
 class PlantDiseaseRecognizer:
     def __init__(self, registry_path: str, device: str = "cpu"):
         self.device = device
