@@ -1,0 +1,81 @@
+{
+    "species_classifier": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\species_classifier.pth",
+    "species_labels": {
+        "0": "Cucumber",
+        "1": "Eggplant",
+        "2": "Pepper",
+        "3": "Tomato",
+        "4": "Watermelon"
+    },
+    "nutrients": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\nutrients.pth",
+    "nutrient_labels": {
+        "0": "boron-B",
+        "1": "calcium-Ca",
+        "2": "Healthy",
+        "3": "iron-Fe",
+        "4": "magnesium-Mg",
+        "5": "manganese-Mn",
+        "6": "nitrogen-N",
+        "7": "nitrogen_magnesium-N_Mg",
+        "8": "nitrogen_potasium-N_K",
+        "9": "phosphorus-P",
+        "10": "potasium-K"
+    },
+    "disease_classifiers": {
+        "Tomato": {
+            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\tomato.pth",
+            "disease_labels": {
+              "0": "Bacterial spot",
+              "1": "Early blight",
+              "2": "Late blight",
+              "3": "Leaf Mold",
+              "4": "Septoria leaf spot",
+              "5": "Spider mites",
+              "6": "Target spot",
+              "7": "Yellow leaf curl virus",
+              "8": "Mosaic virus",
+              "9": "Healthy"
+            }
+        },
+        "Eggplant": {
+            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\eggplant.pth",
+            "disease_labels": {
+                "0": "Aphids",
+                "1": "Flea Beetles",
+                "2": "Healthy",
+                "3": "Insect Pest Disease",
+                "4": "Leaf Spot Disease",
+                "5": "Mosaic Virus Disease",
+                "6": "Phytophthora Blight",
+                "7": "Powdery Mildew",
+                "8": "Tobacco Mosaic Virus",
+                "9": "Wilt Disease"
+            }
+        },
+        "Cucumber": {
+            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\cucumber.pth",
+            "disease_labels": {
+                "0": "Anthracnose",
+                "1": "Bacterial Wilt",
+                "2": "Downy Mildew",
+                "3": "Gummy Stem Blight",
+                "4": "Healthy"
+            }
+        }, 
+        "Watermelon": {
+            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\watermelon.pth",
+            "disease_labels": {
+                "0": "Downy_Mildew",
+                "1": "Healthy",
+                "2": "Mosaic_Virus"
+            }
+        },
+        "Pepper": {
+            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\pepper.pth",
+            "disease_labels": {
+                "0": "Bacterial_spot",
+                "1": "Healthy"
+            }
+        }
+    }
+}
