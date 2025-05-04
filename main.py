@@ -4,9 +4,10 @@ from telegram.request import HTTPXRequest
 from torchvision import transforms
 from PIL import Image
 import os
+from datetime import datetime
 from photo_process import PlantDiseaseRecognizer
 
-DiseaseRecognizer = PlantDiseaseRecognizer(r'C:\Users\fedor\Desktop\Course_work\Bot\model_registry.json', device='cpu')
+DiseaseRecognizer = PlantDiseaseRecognizer(r'model_registry.json', device='cpu')
 
 IMAGES_DIR = 'images'
 
@@ -24,11 +25,16 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Привет! Отправь мне картинку, и я скажу, что на ней. Для максимальной точночти необходимо отправить фото одного интерисующего листа, желательно на однородном фоне.')
 
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    photo = update.message.photo[-1]
-    file = await photo.get_file()
-
     ensure_images_dir()
-    filename = f"photo_{file.file_id}.jpg"
+
+    user = update.effective_user
+    photo = update.message.photo[-1]
+
+    timestamp = datetime.now().strftime(r'%Y-%d-%m_%H%M%S')
+    username = user.username or f'id{user.id}'
+    filename = f"{username}_{timestamp}.jpg"
+
+    file = await photo.get_file()
     filepath = os.path.join(IMAGES_DIR, filename)
 
     await file.download_to_drive(filepath)
@@ -63,7 +69,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(msg, parse_mode="Markdown")
 
 def main():
-    TOKEN = ''
+    TOKEN = os.getenv('BOT_TOKEN')
     request = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
     app = ApplicationBuilder().token(TOKEN).request(request).build()
 

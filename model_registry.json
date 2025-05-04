@@ -1,5 +1,5 @@
 {
-    "species_classifier": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\species_classifier.pth",
+    "species_classifier": "models/species_classifier.pth",
     "species_labels": {
         "0": "Cucumber",
         "1": "Eggplant",
@@ -7,7 +7,7 @@
         "3": "Tomato",
         "4": "Watermelon"
     },
-    "nutrients": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\nutrients.pth",
+    "nutrients": "models/nutrients.pth",
     "nutrient_labels": {
         "0": "boron-B",
         "1": "calcium-Ca",
@@ -23,7 +23,7 @@
     },
     "disease_classifiers": {
         "Tomato": {
-            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\tomato.pth",
+            "model_path": "models/disease_classifiers/tomato.pth",
             "disease_labels": {
               "0": "Bacterial spot",
               "1": "Early blight",
@@ -38,7 +38,7 @@
             }
         },
         "Eggplant": {
-            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\eggplant.pth",
+            "model_path": "models/disease_classifiers/eggplant.pth",
             "disease_labels": {
                 "0": "Aphids",
                 "1": "Flea Beetles",
@@ -53,7 +53,7 @@
             }
         },
         "Cucumber": {
-            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\cucumber.pth",
+            "model_path": "models/disease_classifiers/cucumber.pth",
             "disease_labels": {
                 "0": "Anthracnose",
                 "1": "Bacterial Wilt",
@@ -63,7 +63,7 @@
             }
         }, 
         "Watermelon": {
-            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\watermelon.pth",
+            "model_path": "models/disease_classifiers/watermelon.pth",
             "disease_labels": {
                 "0": "Downy_Mildew",
                 "1": "Healthy",
@@ -71,7 +71,7 @@
             }
         },
         "Pepper": {
-            "model_path": "C:\\Users\\fedor\\Desktop\\Course_work\\Bot\\models\\disease_classifiers\\pepper.pth",
+            "model_path": "models/disease_classifiers/pepper.pth",
             "disease_labels": {
                 "0": "Bacterial_spot",
                 "1": "Healthy"

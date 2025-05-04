@@ -1,0 +1,9 @@
+services:
+  leafscanbot:
+    build: .
+    container_name: leafscanbot
+    volumes:
+      - PATH:/app/images
+    environment:
+      - BOT_TOKEN=
+    restart: always
